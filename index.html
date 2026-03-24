@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio - Nathalya Santos Cidreira</title>
+        <!-- Vincula o arquivo de estilos CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- Cabeçalho contendo a barra de navegação e o botão de tema -->
+        <header class="navbar">
+            <div class="container nav-container">
+                <h1 class="logo">Nathy Cidreira</h1>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#sobre">Sobre mim</a></li>
+                        <li><a href="#formacao">Formação</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                <button id="theme-toggle" class="btn-theme" title="Alternar Tema Escuro/Claro">🌓 Tema</button>
+            </div>
+        </header>
+
+        <!-- Área principal onde ficam as seções do site -->
+        <main>
+            <!-- Seção: Sobre mim -->
+            <section id="sobre" class="section">
+                <div class="container">
+                    <h2>Sobre mim</h2>
+                    <div class="about-wrapper">
+                        <div class="about-img">
+                            <img src="assets/img/profile.jpg" alt="Foto de Nathy Cidreira">
+                        </div>
+                        <div class="about-content">
+                            <p>
+                                Olá! Meu nome é Nathalya Santos Cidreira (nickname romanoff nos games), sou natural de
+                                Salvador/BA, mas resido em Caldas Novas/GO.
+
+                                Sou Desenvolvedora Pleno com foco em construir aplicações escaláveis e eficientes. Meu
+                                dia a
+                                dia é imerso no ecossistema JavaScript, onde domino tecnologias como Node.js,
+                                TypeScript,
+                                NestJS e Angular. Sou uma entusiasta ferrenha do Linux Mint, que é meu sistema principal
+                                e
+                                garante o ambiente robusto que exijo para codar com alta produtividade.
+
+                                Atualmente, sigo aprimorando minha base teórica cursando ADS na UNINTER, unindo a
+                                prática do mercado à formação acadêmica.
+                            </p>
+
+                            <div class="hobbies">
+                                <h3>Hobbies</h3>
+                                <ul>
+                                    <li>📚 Estudar novas tecnologias</li>
+                                    <li>🗣️ Aprender inglês</li>
+                                    <li>🎮 Jogar videogame nos tempos livres</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Formação -->
+            <section id="formacao" class="section bg-alt">
+                <div class="container">
+                    <h2>Formação e Conhecimentos</h2>
+
+                    <div class="education-card">
+                        <h3>Análise e Desenvolvimento de Sistemas (ADS)</h3>
+                        <p><strong>Instituição:</strong> Centro Universitário Internacional (UNINTER)</p>
+                        <p><strong>Status:</strong> Graduação em andamento (Consolidando base acadêmica).</p>
+                    </div>
+
+                    <div class="skills">
+                        <h3>Stack Tecnológica & Expertises</h3>
+                        <ul class="skills-list">
+                            <li><strong>Backend:</strong> Node.js, TypeScript, NestJS e MongoDB</li>
+                            <li><strong>Frontend:</strong> Angular, HTML5 semântico e CSS3 avançado (Flexbox/Grid)</li>
+                            <li><strong>Ambiente & DevTools:</strong> Linux Mint (OS Principal), Git, Docker e Bash</li>
+                            <li><strong>Arquitetura:</strong> APIs RESTful, Clean Architecture e Princípios SOLID</li>
+                            <li><strong>Idiomas:</strong> Inglês Técnico para Documentação e Desenvolvimento</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Portfólio -->
+            <section id="portfolio" class="section">
+                <div class="container">
+                    <h2>Experiência & Projetos em Produção</h2>
+                    <p style="text-align: center; margin-bottom: 2rem;">
+                        <em>Foco em soluções escaláveis, arquitetura de sistemas e manutenção de plataformas
+                            críticas.</em>
+                    </p>
+
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h3>Conversor de Extratos Bancários</h3>
+                            <p>Aplicação funcional e em produção para conversão e tratamento de dados financeiros.
+                                Desenvolvida com foco em precisão algorítmica e facilidade de uso para o usuário final.
+                            </p>
+                            <div class="tech-tags">
+                                <span class="tag">TypeScript</span> <span class="tag">Node.js</span> <span
+                                    class="tag">Processamento de Dados</span>
+                            </div>
+                            <br>
+                            <a href="https://extratoofx.com" target="_blank" rel="noopener noreferrer"
+                                class="btn">Acessar Aplicação</a>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>Motor de Reservas & Painel Gerencial</h3>
+                            <p>Responsável técnica pela manutenção e implementação de novas funcionalidades no motor de
+                                reservas dos grupos Hotel CTC e Adtur. Gestão completa do painel gerencial
+                                administrativo.</p>
+                            <div class="tech-tags">
+                                <span class="tag">Angular</span> <span class="tag">NestJS</span> <span
+                                    class="tag">Manutenção Crítica</span>
+                            </div>
+                            <br>
+                            <a href="https://github.com/Romanoff-97" target="_blank" rel="noopener noreferrer"
+                                class="btn">Perfil GitHub</a>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>APIs e Microserviços Escaláveis</h3>
+                            <p>Desenvolvimento de APIs utilizando NestJS e MongoDB, aplicando Clean Architecture e
+                                SOLID. Automação de ambientes em Linux Mint para garantir deploys seguros e alta
+                                disponibilidade.</p>
+                            <div class="tech-tags">
+                                <span class="tag">NestJS</span> <span class="tag">MongoDB</span> <span
+                                    class="tag">Docker</span>
+                            </div>
+                            <br>
+                            <a href="https://github.com/Romanoff-97" target="_blank" rel="noopener noreferrer"
+                                class="btn">Perfil GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção: Contato -->
+            <section id="contato" class="section bg-alt">
+                <div class="container">
+                    <h2>Contato</h2>
+                    <p>Tem interesse no meu perfil? Envie uma mensagem preenchendo o formulário abaixo.</p>
+
+                    <!-- Formulário de Contato -->
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                            <span class="error-msg" id="error-nome">Por favor, insira seu nome.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                            <span class="error-msg" id="error-email">Insira um e-mail válido.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem..."
+                                required></textarea>
+                            <span class="error-msg" id="error-mensagem">A mensagem não pode estar vazia.</span>
+                        </div>
+
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal Customizado (Sucesso de Envio) -->
+        <div id="success-modal" class="modal">
+            <div class="modal-content">
+                <h3>Mensagem Enviada!</h3>
+                <p>Sua mensagem foi recebida com sucesso. Retornarei o contato em breve.</p>
+                <button id="close-modal" class="btn">Fechar</button>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <footer>
+            <div class="container">
+                <p>&copy; <span id="current-year">2024</span> Nathalya Santos Cidreira - Estudante de ADS na UNINTER.
+                </p>
+            </div>
+        </footer>
+
+        <!-- Vincula o arquivo de script JavaScript -->
+        <script src="script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,389 @@
+/* =========================================
+   VARIÁVEIS CSS (PALETA DO LINUX MINT) E RESETS
+   ========================================= */
+
+/* Definindo Modo Claro (Padrão) */
+:root {
+    --bg-color: #f5f7f6;
+    /* Fundo principal claro */
+    --bg-alt: #ffffff;
+    /* Fundo alternativo cartões */
+    --text-color: #2c3e38;
+    /* Cinza escuro/esverdeado para o texto */
+    --text-muted: #5b6e65;
+    --primary-color: #5bdc8d;
+    /* Verde Mint moderno */
+    --primary-hover: #48c47b;
+    --border-color: #d1d9d5;
+    --error-color: #e74c3c;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+
+    /* Variáveis de layout */
+    --container-width: 1000px;
+}
+
+/* Definindo Modo Escuro (Acionado pelo JS via atributo) */
+[data-theme="dark"] {
+    --bg-color: #1a1e1c;
+    /* Cinza escuro (estilo terminal) */
+    --bg-alt: #242a27;
+    --text-color: #e0e8e4;
+    --text-muted: #9baaa2;
+    --primary-color: #6de29d;
+    --primary-hover: #5bdc8d;
+    --border-color: #3b4540;
+    --navbar-bg: rgba(36, 42, 39, 0.95);
+}
+
+/* Reset básico para padronizar renderização de navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ativa a rolagem suave ao clicar nos links âncora */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    /* Transição suave na troca de tema */
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--navbar-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-theme {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-theme:hover {
+    background: var(--bg-alt);
+    border-color: var(--primary-color);
+}
+
+/* =========================================
+   ESTRUTURA DAS SEÇÕES
+   ========================================= */
+.section {
+    padding: 100px 0 60px 0;
+    /* Padding superior compensa a barra fixa */
+}
+
+.bg-alt {
+    background-color: var(--bg-alt);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* =========================================
+   SOBRE MIM
+   ========================================= */
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-img {
+    flex-shrink: 0;
+    width: 250px;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    flex-grow: 1;
+}
+
+/* =========================================
+   FORMAÇÃO, CONHECIMENTOS E HOBBIES
+   ========================================= */
+.education-card {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: var(--bg-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.hobbies {
+    margin-top: 20px;
+}
+
+.hobbies ul {
+    list-style: none;
+}
+
+.hobbies li {
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   PORTFÓLIO (CSS GRID)
+   ========================================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: var(--bg-alt);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card p {
+    flex-grow: 1;
+    /* Faz o botão empurrar para o fundo */
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #1a1e1c;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* =========================================
+   FORMULÁRIO DE CONTATO E MODAL
+   ========================================= */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.error-msg {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+    /* Oculto por padrão, ativado pelo JS */
+}
+
+.form-group.invalid input,
+.form-group.invalid textarea {
+    border-color: var(--error-color);
+}
+
+.form-group.invalid .error-msg {
+    display: block;
+    /* Mostra erro se for inválido */
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    /* Oculto por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--bg-alt);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-content h3 {
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    margin-top: 20px;
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+footer {
+    background-color: var(--navbar-bg);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE-FRIENDLY)
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section {
+        padding-top: 150px;
+        /* Compensa o menu mobile mais alto */
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}

@@ -23,9 +23,9 @@ Caso queira testar o projeto localmente, siga os passos abaixo:
 1. Clone o repositório:
 
    ```sh
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   gh repo clone Romanoff-97/meu-portfolio-spa
 
-   cd seu-repositori
+   cd local-onde-salvou/meu-portfolio-spa
 
    Abra o arquivo index.html em seu navegador.
    ```
